@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>submission Form </title>
+  <style>
+  body{
+    background-color:#669999;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body h1{
+    font-size: 18px;
+    text-align: center;
+  }
+  #submissionForm label{
+  text-align: center;
+  padding:300px;
+  font-size: 20px;
+  margin: 20px;
+  width: 50%;
+}
+#submissionForm input[id="name"]{
+  width:50%;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  margin: 30px;
+}
+
+#submissionForm input[id="email"]{
+  width:50%;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  margin: 30px;
+}
+#submissionForm button[id="submit_btn"]{
+  font-size: 30px;
+  width: auto;
+  padding:5px ;
+}
+
+  </style>
+</head>
+<body>
+  
+ <div id="submit">
+  <h1>submit</h1>
+  <form id="submissionForm">
+    <label for="name">name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="email">email:</label><br>
+    <input type="text" id="email" name="email" ><br>
+    <button type="submit" id="submit_btn">submit</button>
+    <p id ="submitForm"></p>
+  </form>
+ </div>
+  <script type='text/javascript'>
+ 
+    document.getElementById("submissionForm").addEventListener("submit", submit);
+
+    //addition
+    function submit(e){
+      e.preventDefault();
+    let name=document.querySelector("#name").value;
+    let email=document.querySelector("#email").value;
+
+      document.getElementById("submitForm").innerText=`you have entered ${name} and ${email}`
+    }
+    
+  </script>
+</body>
+</html> 
